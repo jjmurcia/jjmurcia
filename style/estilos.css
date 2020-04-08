@@ -1,0 +1,41 @@
+.exciting-text::after {
+    content: " <- EXCITING!";
+    color: green;
+}
+
+.boring-text::after {
+    content: " <- BORING";
+    color: red;
+}
+
+div p::spelling-error {
+    color: red;
+}
+
+
+/*first-letter: Primera letra*/
+
+p::first-letter {
+    color: red;
+    font-size: 130%;
+}
+
+
+/*first-line: Primera linea de un parrafo*/
+
+p::first-line {
+    color: blue;
+}
+
+
+/*Before*/
+
+q::before {
+    content: "«";
+    color: blue;
+}
+
+q::after {
+    content: "»";
+    color: red;
+}

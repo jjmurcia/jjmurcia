@@ -1,0 +1,128 @@
+/*
+speudoclases 5 entre 
+(active, checked, first-child, focus, first-of-type, invalid, not, visited, only-child, link, last-child, in-range) 
+obligatorios hover y nth-child
+*/
+
+body {
+    background-color: wheat
+}
+
+a:hover {
+    background-color: tomato;
+}
+
+button:hover {
+    background-color: tomato;
+}
+
+button:active {
+    background-color: rgb(19, 17, 160);
+}
+
+input:checked+label {
+    color: red
+}
+
+article p:first-child {
+    color: lime;
+    background-color: black;
+    padding: 5px;
+}
+
+input:focus {
+    background-color: burlywood;
+    color: cornflowerblue;
+}
+
+footer:first-of-type {
+    background-color: crimson;
+}
+
+aside {
+    text-shadow: 2px 2px 2px;
+}
+
+aside p :not(aside) {
+    background-color: hotpink;
+}
+
+
+/*
+a:link
+a:any-link
+*/
+
+a:any-link {
+    color: red;
+}
+
+li a:link {
+    color: green;
+}
+
+
+/*
+input: range
+input:out-of.range
+*/
+
+input:in-range {
+    background-color: forestgreen;
+}
+
+input:out-of-range {
+    background-color: red;
+}
+
+input:in-range+label::after {
+    content: 'bien.';
+}
+
+input:out-of-range+label::after {
+    content: 'fuera de rango!';
+}
+
+article p:last-child {
+    color: lime;
+}
+
+main :only-child {
+    color: red;
+}
+
+
+/**/
+
+input:invalid {
+    background-color: #ffdddd;
+}
+
+input:valid {
+    background-color: #ddffdd;
+}
+
+form:valid {
+    border: 5px solid #ddffdd;
+}
+
+input:required {
+    border-color: #800000;
+    border-width: 3px;
+}
+
+input:required:invalid {
+    border-color: #C00000;
+}
+
+form:invalid {
+    border: 5px solid #C00000;
+}
+
+li:nth-child(3n+0) {
+    background-color: rgb(28, 189, 162);
+}
+
+li:nth-child(2n+0) {
+    background-color: rgb(106, 105, 146);
+}
