@@ -1,30 +1,5 @@
-.exciting-text::after {
-    content: " <- EXCITING!";
-    color: green;
-}
-
-.boring-text::after {
-    content: " <- BORING";
-    color: red;
-}
-
-div p::spelling-error {
-    color: red;
-}
-
-
-/*first-letter: Primera letra*/
-
-p::first-letter {
-    color: red;
-    font-size: 130%;
-}
-
-
-/*first-line: Primera linea de un parrafo*/
-
-p::first-line {
-    color: blue;
+body {
+    background-color: wheat
 }
 
 
@@ -32,10 +7,25 @@ p::first-line {
 
 q::before {
     content: "«";
-    color: blue;
+    color: red;
 }
 
 q::after {
     content: "»";
-    color: red;
+    color: blue;
+}
+
+
+/*first-letter: Primera letra*/
+
+li::first-letter {
+    color: rgb(247, 0, 0);
+    font-size: 130%;
+}
+
+
+/*first-line: Primera linea de un parrafo*/
+
+li::first-line {
+    color: rgb(0, 47, 255);
 }

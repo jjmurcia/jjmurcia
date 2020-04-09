@@ -1,28 +1,27 @@
-/*
-speudoclases 5 entre 
-(active, checked, first-child, focus, first-of-type, invalid, not, visited, only-child, link, last-child, in-range) 
-obligatorios hover y nth-child
-*/
-
 body {
     background-color: wheat
 }
 
-a:hover {
-    background-color: tomato;
-}
+
+/*mouse encima sin dar click*/
 
 button:hover {
-    background-color: tomato;
+    background-color: lightcoral;
 }
+
+a:hover {
+    background-color: goldenrod;
+}
+
+
+/*cuando se oprime click*/
 
 button:active {
-    background-color: rgb(19, 17, 160);
+    background-color: lightskyblue;
 }
 
-input:checked+label {
-    color: red
-}
+
+/*index*/
 
 article p:first-child {
     color: lime;
@@ -30,49 +29,37 @@ article p:first-child {
     padding: 5px;
 }
 
-input:focus {
-    background-color: burlywood;
-    color: cornflowerblue;
-}
-
-footer:first-of-type {
-    background-color: crimson;
-}
-
-aside {
-    text-shadow: 2px 2px 2px;
-}
-
-aside p :not(aside) {
-    background-color: hotpink;
+article p:last-child {
+    color: red;
+    background-color: black;
+    padding: 5px;
 }
 
 
-/*
-a:link
-a:any-link
-*/
+/*representa cualquier radio (<input type="radio">), 
+checkbox (<input type="checkbox">) 
+u option (<option> en un elemento <select>) que está marcado o conmutado a un estado on.*/
 
-a:any-link {
+input:checked+label {
     color: red;
 }
 
-li a:link {
-    color: green;
+
+/*input:focus: cambia lo que este dentro del input*/
+
+input:focus {
+    background-color: cornflowerblue;
 }
 
 
-/*
-input: range
-input:out-of.range
-*/
+/*input: range input:out-of.range*/
 
 input:in-range {
-    background-color: forestgreen;
+    background-color: rgba(0, 255, 0, 0.25);
 }
 
 input:out-of-range {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.25);
 }
 
 input:in-range+label::after {
@@ -83,46 +70,60 @@ input:out-of-range+label::after {
     content: 'fuera de rango!';
 }
 
-article p:last-child {
-    color: lime;
-}
+
+/*:only-child: representa un elemento sin hermanos*/
 
 main :only-child {
     color: red;
 }
 
 
-/**/
+/*a:link  a:any-link*/
 
-input:invalid {
+li a:any-link {
+    color: red;
+}
+
+li a:link {
+    color: green;
+}
+
+
+/*representa cualquier elemento <input> 
+u otro elemento <form> cuyos contenidos no se puedan validar.*/
+
+.input input:invalid {
     background-color: #ffdddd;
 }
 
-input:valid {
+.input form:invalid {
+    border: 5px solid #ffdddd;
+}
+
+.input input:valid {
     background-color: #ddffdd;
 }
 
-form:valid {
+.input form:valid {
     border: 5px solid #ddffdd;
 }
 
-input:required {
+.input input:required {
     border-color: #800000;
     border-width: 3px;
 }
 
-input:required:invalid {
+.input input:required:invalid {
     border-color: #C00000;
 }
 
-form:invalid {
-    border: 5px solid #C00000;
-}
 
-li:nth-child(3n+0) {
+/*este es complicado*/
+
+.nth :nth-child(2n+1) {
     background-color: rgb(28, 189, 162);
 }
 
-li:nth-child(2n+0) {
+.nth:nth-child(2n) {
     background-color: rgb(106, 105, 146);
 }
